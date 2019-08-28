@@ -1,11 +1,3 @@
-// const net = require('net');
-const { connect } = require("./client");
-const { setupInput } = require("./input");
-
-/**
- * Setup User Interface 
- * Specifically, so that we can handle user input via stdin
- */
 const setupInput = function(data, callback) {
   const stdin = process.stdin;
   stdin.setRawMode(true);
@@ -25,6 +17,4 @@ const handleUserInput = function() {
   process.exit();
 }
 
-console.log('Connecting ...');
-connect();
-setupInput();
+module.exports = { setupInput };
