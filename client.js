@@ -11,6 +11,11 @@ const connect = function() {
   })
   conn.setEncoding('utf8'); 
 
+  conn.on("connect", function() {
+    console.log("Connection success!");
+    conn.write("Name: KEY");
+  });
+
   return conn;
 }
 
