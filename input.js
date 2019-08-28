@@ -21,6 +21,13 @@ const handleUserInput = function() {
       // console.log("I DID IT!");
       process.exit();
     }
+    if(key === "q") {
+      connection.write("Say: WEEEE");
+    }
+    if(key === "e") {
+      connection.write("Say: PARKOUR!");
+    }
+
     if(key === "w") {
       console.log("Moving up");
       connection.write("Move: up");
