@@ -14,7 +14,11 @@ const connect = function() {
   conn.on("connect", function() {
     console.log("Connection success!");
     conn.write("Name: KEY");
+    // conn.write("Move: up");
   });
+
+  // conn.on("data", function(data) {
+  // })
 
   return conn;
 }
